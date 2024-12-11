@@ -4,7 +4,7 @@ import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:portfolio_website/views/about_me.dart';
 import 'package:portfolio_website/views/contact_us.dart';
 import 'package:portfolio_website/views/footer_class.dart';
-import 'package:portfolio_website/views/home_page.dart';
+import 'package:portfolio_website/src/features/home/view/home_page.dart';
 import 'package:portfolio_website/views/my_portfolio.dart';
 import 'package:portfolio_website/views/my_services.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';

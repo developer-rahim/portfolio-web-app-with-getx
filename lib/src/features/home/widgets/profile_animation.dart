@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:portfolio_website/globals/app_assets.dart';
+part of '../view/home_page.dart';
 
 class ProfileAnimation extends StatefulWidget {
   const ProfileAnimation({super.key});
