@@ -7,7 +7,7 @@ import 'package:portfolio_website/globals/app_colors.dart';
 import 'package:portfolio_website/globals/app_text_styles.dart';
 import 'package:portfolio_website/globals/constants.dart';
 import 'package:portfolio_website/helper%20class/helper_class.dart';
-import 'package:portfolio_website/widgets/profile_animation.dart';
+import 'package:portfolio_website/helper%20class/widgets/profile_animation.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

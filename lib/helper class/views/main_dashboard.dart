@@ -48,7 +48,7 @@ class _MainDashBoardState extends State<MainDashBoard> {
     _itemScrollController
         .scrollTo(
             index: index,
-            duration: const Duration(seconds: 2),
+            duration: const Duration(milliseconds: 100),
             curve: Curves.fastLinearToSlowEaseIn)
         .whenComplete(() {
       _menuIndex.value = index;
