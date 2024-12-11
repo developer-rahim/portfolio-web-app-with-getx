@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website/globals/app_colors.dart';
 import 'package:portfolio_website/globals/app_text_styles.dart';
 import 'package:portfolio_website/globals/constants.dart';
-import 'package:portfolio_website/helper%20class/views/about_me.dart';
-import 'package:portfolio_website/helper%20class/views/contact_us.dart';
-import 'package:portfolio_website/helper%20class/views/footer_class.dart';
-import 'package:portfolio_website/helper%20class/views/home_page.dart';
-import 'package:portfolio_website/helper%20class/views/my_portfolio.dart';
-import 'package:portfolio_website/helper%20class/views/my_services.dart';
+import 'package:portfolio_website/views/about_me.dart';
+import 'package:portfolio_website/views/contact_us.dart';
+import 'package:portfolio_website/views/footer_class.dart';
+import 'package:portfolio_website/views/home_page.dart';
+import 'package:portfolio_website/views/my_portfolio.dart';
+import 'package:portfolio_website/views/my_services.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class MainDashBoard extends StatefulWidget {
@@ -48,7 +48,7 @@ class _MainDashBoardState extends State<MainDashBoard> {
     _itemScrollController
         .scrollTo(
             index: index,
-            duration: const Duration(milliseconds: 100),
+            duration: const Duration(seconds: 2),
             curve: Curves.fastLinearToSlowEaseIn)
         .whenComplete(() {
       _menuIndex.value = index;
