@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/views/main_dashboard.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:portfolio_website/src/core/main_dashboard_binding.dart';
+import 'package:portfolio_website/src/features/dashboard/view/main_dashboard.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -12,7 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final PageStorageBucket bucket = PageStorageBucket();
-    return MaterialApp(
+    return GetMaterialApp(
+      initialBinding: MainDashboardBinding(),
       title: 'My Portfolio',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

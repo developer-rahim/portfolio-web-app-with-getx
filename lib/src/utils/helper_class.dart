@@ -37,7 +37,9 @@ class HelperClass extends StatelessWidget {
             alignment: Alignment.center,
             color: bgColor,
             padding: EdgeInsets.symmetric(
-                vertical: size.height * 0.1, horizontal: paddingWidth),
+              vertical: size.height * 0.1,
+              horizontal: paddingWidth,
+            ),
             child: tablet,
           );
         } else {
@@ -47,7 +49,7 @@ class HelperClass extends StatelessWidget {
             alignment: Alignment.center,
             color: bgColor,
             padding: EdgeInsets.symmetric(
-              vertical: size.height * 0.18,
+              vertical: size.height * 0.08,
               horizontal: paddingWidth,
             ),
             child: desktop,
