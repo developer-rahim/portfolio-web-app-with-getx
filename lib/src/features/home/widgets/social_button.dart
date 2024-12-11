@@ -1,13 +1,13 @@
 part of '../view/home_page.dart';
 
-class _SocialButton extends StatelessWidget {
+class _SocialButton extends GetView<HomeViewController> {
   const _SocialButton({
     required this.asset,
-    required this.hover,
+    required this.index,
   });
 
   final String asset;
-  final bool hover;
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Ink(
@@ -22,12 +22,16 @@ class _SocialButton extends StatelessWidget {
         shape: BoxShape.circle,
       ),
       padding: const EdgeInsets.all(6),
-      child: Image.asset(
-        asset,
-        width: 10,
-        height: 12,
-        color: hover ? AppColors.bgColor : AppColors.themeColor,
-        // fit: BoxFit.fill,
+      child: Obx(
+        () => Image.asset(
+          asset,
+          width: 10,
+          height: 12,
+          color: controller.socialBI.value == index
+              ? AppColors.bgColor
+              : AppColors.themeColor,
+          // fit: BoxFit.fill,
+        ),
       ),
     );
   }

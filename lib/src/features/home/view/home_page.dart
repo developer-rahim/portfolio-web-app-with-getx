@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:portfolio_website/globals/app_assets.dart';
 import 'package:portfolio_website/globals/app_buttons.dart';
@@ -12,6 +13,8 @@ import 'package:portfolio_website/src/utils/helper_class.dart';
 part '../widgets/home_personal_info.dart';
 part '../widgets/social_button.dart';
 part '../widgets/profile_animation.dart';
+part '../widgets/social_button_list_builder.dart';
+part '../widgets/home_animated_text.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

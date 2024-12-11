@@ -11,5 +11,5 @@ class HomeViewController extends GetxController {
     AppAssets.github,
   ];
 
-  Rx<int?> socialBI = (null).obs;
+  Rx<int?> socialBI = (-1).obs;
 }
