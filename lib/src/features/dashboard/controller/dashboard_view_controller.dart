@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
-import 'package:portfolio_website/views/about_me.dart';
+import 'package:portfolio_website/src/features/about/view/about_me.dart';
 import 'package:portfolio_website/views/contact_us.dart';
 import 'package:portfolio_website/views/footer_class.dart';
 import 'package:portfolio_website/src/features/home/view/home_page.dart';

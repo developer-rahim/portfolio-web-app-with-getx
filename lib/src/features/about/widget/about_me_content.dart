@@ -1,59 +1,10 @@
-import 'package:animate_do/animate_do.dart';
-import 'package:flutter/material.dart';
-import 'package:portfolio_website/globals/app_assets.dart';
-import 'package:portfolio_website/globals/app_buttons.dart';
-import 'package:portfolio_website/globals/app_colors.dart';
-import 'package:portfolio_website/globals/app_text_styles.dart';
-import 'package:portfolio_website/globals/constants.dart';
-import 'package:portfolio_website/src/utils/helper_class.dart';
+part of '../view/about_me.dart';
 
-class AboutMe extends StatelessWidget {
-  const AboutMe({super.key});
+class _AboutMeContent extends StatelessWidget {
+  const _AboutMeContent();
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
-    return HelperClass(
-      mobile: Column(
-        children: [
-          buildAboutMeContents(),
-          Constants.sizedBox(height: 35.0),
-          buildProfilePicture(),
-        ],
-      ),
-      tablet: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          buildProfilePicture(),
-          Constants.sizedBox(width: 25.0),
-          Expanded(child: buildAboutMeContents())
-        ],
-      ),
-      desktop: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          buildProfilePicture(),
-          Constants.sizedBox(width: 25.0),
-          Expanded(child: buildAboutMeContents())
-        ],
-      ),
-      paddingWidth: size.width * 0.1,
-      bgColor: AppColors.bgColor2,
-    );
-  }
-
-  FadeInRight buildProfilePicture() {
-    return FadeInRight(
-      duration: const Duration(milliseconds: 1200),
-      child: Image.asset(
-        AppAssets.profile2,
-        height: 450,
-        width: 400,
-      ),
-    );
-  }
-
-  Column buildAboutMeContents() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
@@ -97,11 +48,6 @@ class AboutMe extends StatelessWidget {
           ),
         ),
         Constants.sizedBox(height: 15.0),
-        FadeInUp(
-          duration: const Duration(milliseconds: 1800),
-          child: AppButtons.buildMaterialButton(
-              onTap: () {}, buttonName: 'Read More'),
-        )
       ],
     );
   }
