@@ -47,7 +47,9 @@ class HelperClass extends StatelessWidget {
             alignment: Alignment.center,
             color: bgColor,
             padding: EdgeInsets.symmetric(
-                vertical: size.height * 0.18, horizontal: paddingWidth),
+              vertical: size.height * 0.18,
+              horizontal: paddingWidth,
+            ),
             child: desktop,
           );
         }
