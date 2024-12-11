@@ -18,7 +18,7 @@ class _ProjectCard extends GetView<PortfolioViewController> {
           if (value) {
             controller.hoveredIndex.value = index;
           } else {
-            controller.hoveredIndex.value = null;
+            controller.hoveredIndex.value = -1;
           }
         },
         child: Obx(
