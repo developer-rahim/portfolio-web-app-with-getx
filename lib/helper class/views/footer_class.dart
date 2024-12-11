@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website/globals/app_colors.dart';
 
 class FooterClass extends StatelessWidget {
-  const FooterClass({
-    Key? key,
-  }) : super(key: key);
+  const FooterClass({super.key});
 
   @override
   Widget build(BuildContext context) {

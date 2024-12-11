@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website/globals/app_assets.dart';
 
 class ProfileAnimation extends StatefulWidget {
-  const ProfileAnimation({Key? key}) : super(key: key);
+  const ProfileAnimation({super.key});
 
   @override
-  _ProfileAnimationState createState() => _ProfileAnimationState();
+  State<ProfileAnimation> createState() => _ProfileAnimationState();
 }
 
 class _ProfileAnimationState extends State<ProfileAnimation>

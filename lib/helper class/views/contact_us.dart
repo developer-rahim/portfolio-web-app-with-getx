@@ -7,7 +7,7 @@ import 'package:portfolio_website/globals/constants.dart';
 import 'package:portfolio_website/helper%20class/helper_class.dart';
 
 class ContactUs extends StatelessWidget {
-  const ContactUs({Key? key}) : super(key: key);
+  const ContactUs({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -7,7 +7,7 @@ import 'package:portfolio_website/globals/constants.dart';
 import 'package:portfolio_website/helper%20class/helper_class.dart';
 
 class MyPortfolio extends StatefulWidget {
-  const MyPortfolio({Key? key}) : super(key: key);
+  const MyPortfolio({super.key});
 
   @override
   State<MyPortfolio> createState() => _MyPortfolioState();
@@ -25,8 +25,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
     AppAssets.work2,
   ];
 
-  var hoveredIndex;
-
+  final ValueNotifier<int?> hoveredIndex = ValueNotifier<int?>(null);
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -75,79 +74,82 @@ class _MyPortfolioState extends State<MyPortfolio> {
         var image = images[index];
         return FadeInUpBig(
           duration: const Duration(milliseconds: 1600),
-          child: InkWell(
-            onTap: () {},
-            onHover: (value) {
-              setState(() {
-                if (value) {
-                  hoveredIndex = index;
-                } else {
-                  hoveredIndex = null;
-                }
-              });
-            },
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                        image: AssetImage(image), fit: BoxFit.fill),
-                  ),
-                ),
-                Visibility(
-                  visible: index == hoveredIndex,
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 600),
-                    transform: index == hoveredIndex ? onH0verEffect : null,
-                    curve: Curves.easeIn,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 14, vertical: 16),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      gradient: LinearGradient(
-                          colors: [
-                            AppColors.themeColor.withOpacity(1.0),
-                            AppColors.themeColor.withOpacity(0.9),
-                            AppColors.themeColor.withOpacity(0.8),
-                            AppColors.themeColor.withOpacity(0.6),
-                          ],
-                          begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter),
-                    ),
-                    child: Column(
-                      children: [
-                        Text(
-                          'App Development',
-                          style: AppTextStyles.montserratStyle(
-                              color: Colors.black87, fontSize: 20),
+          child: ValueListenableBuilder<int?>(
+              valueListenable: hoveredIndex,
+              builder: (BuildContext context, int? hoveredIndexValue, child) {
+                return InkWell(
+                  onTap: () {},
+                  onHover: (value) {
+                    if (value) {
+                      hoveredIndexValue = index;
+                    } else {
+                      hoveredIndexValue = null;
+                    }
+                  },
+                  child: Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                              image: AssetImage(image), fit: BoxFit.fill),
                         ),
-                        Constants.sizedBox(height: 15.0),
-                        Text(
-                          'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-                          style:
-                              AppTextStyles.normalStyle(color: Colors.black87),
-                          textAlign: TextAlign.center,
-                        ),
-                        Constants.sizedBox(height: 30.0),
-                        CircleAvatar(
-                          maxRadius: 25,
-                          backgroundColor: Colors.white,
-                          child: Image.asset(
-                            AppAssets.share,
-                            width: 25,
-                            height: 25,
-                            fit: BoxFit.fill,
+                      ),
+                      Visibility(
+                        visible: index == hoveredIndexValue,
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 600),
+                          transform:
+                              index == hoveredIndexValue ? onH0verEffect : null,
+                          curve: Curves.easeIn,
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 14, vertical: 16),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            gradient: LinearGradient(
+                                colors: [
+                                  AppColors.themeColor.withOpacity(1.0),
+                                  AppColors.themeColor.withOpacity(0.9),
+                                  AppColors.themeColor.withOpacity(0.8),
+                                  AppColors.themeColor.withOpacity(0.6),
+                                ],
+                                begin: Alignment.bottomCenter,
+                                end: Alignment.topCenter),
                           ),
-                        )
-                      ],
-                    ),
+                          child: Column(
+                            children: [
+                              Text(
+                                'App Development',
+                                style: AppTextStyles.montserratStyle(
+                                    color: Colors.black87, fontSize: 20),
+                              ),
+                              Constants.sizedBox(height: 15.0),
+                              Text(
+                                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
+                                style: AppTextStyles.normalStyle(
+                                    color: Colors.black87),
+                                textAlign: TextAlign.center,
+                              ),
+                              Constants.sizedBox(height: 30.0),
+                              CircleAvatar(
+                                maxRadius: 25,
+                                backgroundColor: Colors.white,
+                                child: Image.asset(
+                                  AppAssets.share,
+                                  width: 25,
+                                  height: 25,
+                                  fit: BoxFit.fill,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
-            ),
-          ),
+                );
+              }),
         );
       },
     );

@@ -8,7 +8,7 @@ import 'package:portfolio_website/globals/constants.dart';
 import 'package:portfolio_website/helper%20class/helper_class.dart';
 
 class AboutMe extends StatelessWidget {
-  const AboutMe({Key? key}) : super(key: key);
+  const AboutMe({super.key});
 
   @override
   Widget build(BuildContext context) {

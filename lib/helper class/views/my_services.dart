@@ -8,7 +8,7 @@ import 'package:portfolio_website/globals/constants.dart';
 import 'package:portfolio_website/helper%20class/helper_class.dart';
 
 class MyServices extends StatefulWidget {
-  const MyServices({Key? key}) : super(key: key);
+  const MyServices({super.key});
 
   @override
   State<MyServices> createState() => _MyServicesState();
