@@ -19,10 +19,12 @@ class MainDashBoard extends StatefulWidget {
 
 class _MainDashBoardState extends State<MainDashBoard> {
   final ItemScrollController _itemScrollController = ItemScrollController();
+
+  final ScrollOffsetController scrollOffsetController =
+      ScrollOffsetController();
+
   final ItemPositionsListener itemPositionsListener =
       ItemPositionsListener.create();
-  final ScrollOffsetListener scrollOffsetListener =
-      ScrollOffsetListener.create();
   final onMenuHover = Matrix4.identity()..scale(1.0);
   final menuItems = <String>[
     'Home',
@@ -53,7 +55,18 @@ class _MainDashBoardState extends State<MainDashBoard> {
     });
   }
 
-  final yourScrollController = ScrollController();
+  late ScrollController yourScrollController;
+  @override
+  void initState() {
+    super.initState();
+    yourScrollController = ScrollController();
+  }
+
+  @override
+  void dispose() {
+    yourScrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -124,13 +137,11 @@ class _MainDashBoardState extends State<MainDashBoard> {
                                 },
                                 borderRadius: BorderRadius.circular(100),
                                 onHover: (value) {
-                                  setState(() {
-                                    if (value) {
-                                      menuIndex = index;
-                                    } else {
-                                      menuIndex = 0;
-                                    }
-                                  });
+                                  if (value) {
+                                    menuIndex = index;
+                                  } else {
+                                    menuIndex = 0;
+                                  }
                                 },
                                 child: buildNavBarAnimatedContainer(
                                     index, menuIndex == index ? true : false),
@@ -146,19 +157,14 @@ class _MainDashBoardState extends State<MainDashBoard> {
           },
         ),
       ),
-      body: Scrollbar(
-        trackVisibility: true,
-        thumbVisibility: true,
-        thickness: 8,
-        interactive: true,
-        controller: yourScrollController,
-        child: ListView.builder(
-          itemCount: screensList.length,
-          controller: yourScrollController,
-          itemBuilder: (context, index) {
-            return screensList[index];
-          },
-        ),
+      body: ScrollablePositionedList.builder(
+        itemCount: screensList.length,
+        itemScrollController: _itemScrollController,
+        itemPositionsListener: itemPositionsListener,
+        scrollOffsetController: scrollOffsetController,
+        itemBuilder: (context, index) {
+          return screensList[index];
+        },
       ),
     );
   }
