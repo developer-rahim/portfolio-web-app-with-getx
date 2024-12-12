@@ -10,6 +10,7 @@ import 'package:portfolio_website/globals/app_text_styles.dart';
 import 'package:portfolio_website/globals/constants.dart';
 import 'package:portfolio_website/src/features/home/controller/home_view_controller.dart';
 import 'package:portfolio_website/src/utils/helper_class.dart';
+import 'dart:html' as html;
 part '../widgets/home_personal_info.dart';
 part '../widgets/social_button.dart';
 part '../widgets/profile_animation.dart';
