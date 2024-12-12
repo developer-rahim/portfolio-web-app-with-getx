@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/globals/app_colors.dart';
+import 'package:portfolio_website/src/globals/app_colors.dart';
 
 class FooterClass extends StatelessWidget {
   const FooterClass({super.key});

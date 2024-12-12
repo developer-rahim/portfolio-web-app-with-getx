@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:portfolio_website/globals/app_colors.dart';
-import 'package:portfolio_website/globals/app_text_styles.dart';
-import 'package:portfolio_website/globals/constants.dart';
+import 'package:portfolio_website/src/globals/app_colors.dart';
+import 'package:portfolio_website/src/globals/app_text_styles.dart';
+import 'package:portfolio_website/src/globals/constants.dart';
 import 'package:portfolio_website/src/features/dashboard/controller/dashboard_view_controller.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 part '../widgets/nav_bar_animation.dart';
@@ -37,11 +37,11 @@ class _MainDashBoardState extends State<MainDashBoard> {
     });
   }
 
-  @override
-  void dispose() {
-    controller.scrollController.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   controller.scrollController.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {

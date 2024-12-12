@@ -47,7 +47,7 @@ class _HomePersonalInfo extends GetView<HomeViewController> {
                     'https://drive.google.com/uc?export=download&id=1OAdtQDMQwG_onW2dm0kNbSn8ZFdfytcD',
                     'rahim.pdf');
               },
-              buttonName: 'Download CV'),
+              buttonName: 'Download Resume'),
         ),
       ],
     );
