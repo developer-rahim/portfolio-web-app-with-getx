@@ -44,15 +44,17 @@ class _HomePersonalInfo extends GetView<HomeViewController> {
           child: AppButtons.buildMaterialButton(
               onTap: () {
                 downloadRemotePdf(
-                    'https://drive.google.com/uc?export=download&id=1OAdtQDMQwG_onW2dm0kNbSn8ZFdfytcD',
+                    'https://drive.google.com/file/d/1OAdtQDMQwG_onW2dm0kNbSn8ZFdfytcD/view?usp=sharing',
+                    // 'https://drive.google.com/uc?export=download&id=1OAdtQDMQwG_onW2dm0kNbSn8ZFdfytcD',
                     'rahim.pdf');
               },
-              buttonName: 'Download Resume'),
+              buttonName: 'Download Updated Resume'),
         ),
       ],
     );
   }
 
+//
   void downloadRemotePdf(String url, String fileName) {
     // Create an anchor element
     final anchor = html.AnchorElement()
