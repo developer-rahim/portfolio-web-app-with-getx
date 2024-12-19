@@ -5,19 +5,21 @@ class _DownloadResumButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  FadeInUp(
-          duration: const Duration(milliseconds: 1800),
-          child: AppButtons.buildMaterialButton(
-              onTap: () {
-                downloadRemotePdf(
-                    'https://drive.google.com/file/d/1OAdtQDMQwG_onW2dm0kNbSn8ZFdfytcD/view?usp=sharing',
-                    // 'https://drive.google.com/uc?export=download&id=1OAdtQDMQwG_onW2dm0kNbSn8ZFdfytcD',
-                    'rahim.pdf');
-              },
-              buttonName: 'Download Resume'),
-        );
-  } void downloadRemotePdf(String url, String fileName) {
-    // Create an anchor element
+    return FadeInUp(
+      duration: const Duration(milliseconds: 1800),
+      child: AppButtons.buildMaterialButton(
+          onTap: () {
+            downloadRemotePdf(
+                'https://drive.google.com/file/d/1OAdtQDMQwG_onW2dm0kNbSn8ZFdfytcD/view?usp=sharing',
+                // 'https://drive.google.com/uc?export=download&id=1OAdtQDMQwG_onW2dm0kNbSn8ZFdfytcD',
+                'rahim.pdf');
+          },
+          buttonName: 'Download Resume'),
+    );
+  }
+
+  void downloadRemotePdf(String url, String fileName) {
+  // Create an anchor element
     final anchor = html.AnchorElement()
       ..href = url // The URL of the remote file
       ..download = fileName // Set the desired download file name
@@ -31,5 +33,5 @@ class _DownloadResumButton extends StatelessWidget {
 
     // Remove the anchor element to clean up the DOM
     anchor.remove();
-  }
+}
 }
