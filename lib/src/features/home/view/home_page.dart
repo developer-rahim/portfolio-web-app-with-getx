@@ -17,7 +17,7 @@ part '../widgets/profile_animation.dart';
 part '../widgets/social_button_list_builder.dart';
 part '../widgets/home_animated_text.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatelessWidget {///////////
   const HomePage({super.key});
 
   @override
