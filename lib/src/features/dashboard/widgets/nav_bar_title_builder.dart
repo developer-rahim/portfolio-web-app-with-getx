@@ -9,7 +9,7 @@ class _NavBarTitleBuilder extends GetView<MianDashboardViewController> {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         const Text(
-          'Portfolio',
+          'Flutter Dev Portfolio',
           style: TextStyle(
             fontWeight: FontWeight.w600,
             color: Colors.white,

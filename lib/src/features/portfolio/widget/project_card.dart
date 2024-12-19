@@ -2,7 +2,6 @@ part of '../view/my_portfolio.dart';
 
 class _ProjectCard extends GetView<PortfolioViewController> {
   const _ProjectCard({
-    super.key,
     required this.index,
     required this.image,
   });
