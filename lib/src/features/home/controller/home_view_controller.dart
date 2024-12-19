@@ -5,9 +5,9 @@ import 'package:portfolio_website/src/globals/app_assets.dart';
 class HomeViewController extends GetxController {
   final socialButtons = <String>[
     AppAssets.facebook,
-    AppAssets.twitter,
+   // AppAssets.twitter,
     AppAssets.linkedIn,
-    AppAssets.insta,
+    //AppAssets.insta,
     AppAssets.github,
   ];
 

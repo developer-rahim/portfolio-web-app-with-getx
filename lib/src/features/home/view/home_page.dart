@@ -3,6 +3,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
+import 'package:portfolio_website/src/core/app_constant/app_constant.dart';
 import 'package:portfolio_website/src/globals/app_assets.dart';
 import 'package:portfolio_website/src/globals/app_buttons.dart';
 import 'package:portfolio_website/src/globals/app_colors.dart';
@@ -11,6 +12,8 @@ import 'package:portfolio_website/src/globals/constants.dart';
 import 'package:portfolio_website/src/features/home/controller/home_view_controller.dart';
 import 'package:portfolio_website/src/utils/helper_class.dart';
 import 'dart:html' as html;
+
+import 'package:url_launcher/url_launcher.dart';
 part '../widgets/home_personal_info.dart';
 part '../widgets/social_button.dart';
 part '../widgets/profile_animation.dart';

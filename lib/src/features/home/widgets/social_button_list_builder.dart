@@ -14,7 +14,7 @@ class _SocialButtonListBuilder extends GetView<HomeViewController> {
         separatorBuilder: (context, child) => Constants.sizedBox(width: 8.0),
         itemBuilder: (context, index) {
           return InkWell(
-            onTap: () {},
+            onTap:(){launchURL(index==0?fbLink:index==1?linkdinLink:gitHubLink);} ,
             onHover: (value) {
               if (value) {
                 controller.socialBI.value = index;
@@ -33,5 +33,11 @@ class _SocialButtonListBuilder extends GetView<HomeViewController> {
         },
       ),
     );
+  } Future<void> launchURL(String socialMedilaLinks) async {
+    if (await canLaunchUrl(Uri.parse( socialMedilaLinks))) {
+      await launchUrl(Uri.parse( socialMedilaLinks));
+    } else {
+      throw 'Could not launch $socialMedilaLinks';
+    }
   }
 }
