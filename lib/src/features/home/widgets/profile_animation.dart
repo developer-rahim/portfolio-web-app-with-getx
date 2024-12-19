@@ -33,11 +33,13 @@ class _ProfileAnimationState extends State<ProfileAnimation>
   Widget build(BuildContext context) {
     return SlideTransition(
       position: _animation,
-      child: Image.asset(
-        AppAssets.profile1,
-        width: 340,
-        height: 450,
-        fit: BoxFit.fill,
+      child: ClipRRect(borderRadius: BorderRadius.circular(10),
+        child: Image.asset(
+          AppAssets.profile1,
+          width: 340,
+          height: 450,
+          fit: BoxFit.fill,
+        ),
       ),
     );
   }

@@ -16,7 +16,7 @@ part '../widgets/social_button.dart';
 part '../widgets/profile_animation.dart';
 part '../widgets/social_button_list_builder.dart';
 part '../widgets/home_animated_text.dart';
-
+part '../widgets/download_resum_button.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
