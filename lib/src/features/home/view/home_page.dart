@@ -3,7 +3,9 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
-import 'package:portfolio_website/src/core/app_constant/app_constant.dart';
+import 'package:portfolio_website/src/core/app_constant/app_string.dart';
+import 'package:portfolio_website/src/core/app_constant/contact_info.dart';
+
 import 'package:portfolio_website/src/globals/app_assets.dart';
 import 'package:portfolio_website/src/globals/app_buttons.dart';
 import 'package:portfolio_website/src/globals/app_colors.dart';
