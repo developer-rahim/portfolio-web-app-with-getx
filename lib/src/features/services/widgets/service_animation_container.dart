@@ -20,7 +20,7 @@ class _ServiceAnimationContainer extends GetView<ServiceViewController> {
       return AnimatedContainer(
         duration: const Duration(milliseconds: 300),
         width: hover.value ? hoverWidth : width,
-        height: hover.value ? 390 : 380,
+        height: hover.value ? 400 : 390,
         alignment: Alignment.center,
         transform: hover.value ? controller.onHoverActive : null,
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 24),
