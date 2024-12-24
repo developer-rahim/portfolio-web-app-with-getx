@@ -17,19 +17,30 @@ class AboutMe extends StatelessWidget {
     return HelperClass(
       mobile: const Column(
         children: [
+          _AboutProfileSection(
+            radius: 500,
+            height: 200,
+            widgth: 200,
+          ),
+          SizedBox(height: 35),
           _AboutMeContent(),
           // Constants.sizedBox(height: 35.0),
-          SizedBox(height: 35),
-          _AboutProfileSection(),
         ],
       ),
       tablet: const Row(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          _AboutProfileSection(),
+          Expanded(
+            child: _AboutProfileSection(
+              radius: 500,
+              height: 250,
+              widgth: 250,
+            ),
+          ),
           SizedBox(width: 25),
           //  Constants.sizedBox(width: 25.0),
-          Expanded(child: _AboutMeContent())
+          Expanded(flex: 2, child: _AboutMeContent())
         ],
       ),
       desktop: const Row(

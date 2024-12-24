@@ -65,33 +65,28 @@ class MyServices extends GetView<ServiceViewController> {
         children: [
           const _ServiceText(),
           Constants.sizedBox(height: 60.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {},
-                onHover: (value) {
-                  controller.isApp.value = value;
-                },
-                child: _ServiceAnimationContainer(
-                  title: 'App Development',
-                  asset: AppAssets.code,
-                  hover: controller.isApp,
-                ),
-              ),
-              Constants.sizedBox(width: 24.0),
-              InkWell(
-                onTap: () {},
-                onHover: (value) {
-                  controller.isGraphic.value = value;
-                },
-                child: _ServiceAnimationContainer(
-                  title: 'Graphic Designing',
-                  asset: AppAssets.brush,
-                  hover: controller.isGraphic,
-                ),
-              ),
-            ],
+          InkWell(
+            onTap: () {},
+            onHover: (value) {
+              controller.isApp.value = value;
+            },
+            child: _ServiceAnimationContainer(
+              title: 'App Development',
+              asset: AppAssets.code,
+              hover: controller.isApp,
+            ),
+          ),
+        Constants.sizedBox(height: 26.0),
+          InkWell(
+            onTap: () {},
+            onHover: (value) {
+              controller.isGraphic.value = value;
+            },
+            child: _ServiceAnimationContainer(
+              title: 'Graphic Designing',
+              asset: AppAssets.brush,
+              hover: controller.isGraphic,
+            ),
           ),
           Constants.sizedBox(height: 26.0),
           InkWell(

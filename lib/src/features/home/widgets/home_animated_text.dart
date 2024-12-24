@@ -26,7 +26,10 @@ class _HomeAnimatedText extends StatelessWidget {
               TyperAnimatedText('Web App Developer',
                   textStyle:
                       AppTextStyles.montserratStyle(color: Colors.lightBlue)),
-              TyperAnimatedText('Flutter Developer',
+              TyperAnimatedText('Web App Developer',
+                  textStyle:
+                      AppTextStyles.montserratStyle(color: Colors.lightBlue)),
+              TyperAnimatedText('MacOS App Developer',
                   textStyle:
                       AppTextStyles.montserratStyle(color: Colors.lightBlue))
             ],

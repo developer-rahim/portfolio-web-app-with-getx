@@ -21,6 +21,7 @@ part '../widgets/profile_animation.dart';
 part '../widgets/social_button_list_builder.dart';
 part '../widgets/home_animated_text.dart';
 part '../widgets/download_resum_button.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -30,17 +31,33 @@ class HomePage extends StatelessWidget {
     return HelperClass(
       mobile: Column(
         children: [
-          const _HomePersonalInfo(),
+          const ProfileAnimation(
+            radius: 1000,
+            height: 200,
+            widgth: 200,
+          ),
           Constants.sizedBox(height: 25.0),
-          const ProfileAnimation()
+          const _HomePersonalInfo(),
+
+          //const ProfileAnimation()
         ],
       ),
       tablet: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Expanded(child: _HomePersonalInfo()),
-          ProfileAnimation(),
+          Expanded(
+            flex: 2,
+            child: _HomePersonalInfo(),
+          ),
+          SizedBox(width: 30),
+          Flexible(
+            child: ProfileAnimation(
+              radius: 10000,
+              height: 250,
+              widgth: 250,
+            ),
+          ),
         ],
       ),
       desktop: const Row(
