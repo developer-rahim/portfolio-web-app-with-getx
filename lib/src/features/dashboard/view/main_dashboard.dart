@@ -34,7 +34,7 @@ class _MainDashBoardState extends State<MainDashBoard> {
       } else {
         debugPrint('No items visible');
       }
-      print(controller.menuIndex.value);
+      //print(controller.menuIndex.value);
     });
   }
 
@@ -46,7 +46,8 @@ class _MainDashBoardState extends State<MainDashBoard> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    print(MediaQuery.of(context).size.width)
+;    return Scaffold(
       backgroundColor: AppColors.bgColor,
       appBar: AppBar(
         backgroundColor: AppColors.bgColor,
