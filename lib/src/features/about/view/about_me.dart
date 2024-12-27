@@ -14,7 +14,7 @@ class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return HelperClass(
+    return ResponsibeLayout(
       mobile: const Column(
         children: [
           _AboutProfileSection(

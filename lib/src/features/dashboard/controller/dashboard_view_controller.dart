@@ -47,5 +47,6 @@ class MianDashboardViewController extends GetxController {
         .whenComplete(() {
       menuIndex.value = index;
     });
+    update();
   }
 }

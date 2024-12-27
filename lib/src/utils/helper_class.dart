@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class HelperClass extends StatelessWidget {
+class ResponsibeLayout extends StatelessWidget {
   final Widget mobile;
   final Widget tablet;
   final Widget desktop;
   final double paddingWidth;
   final Color bgColor;
-  const HelperClass({
+  const ResponsibeLayout({
     super.key,
     required this.mobile,
     required this.tablet,
@@ -14,13 +14,23 @@ class HelperClass extends StatelessWidget {
     required this.paddingWidth,
     required this.bgColor,
   });
+ static bool isMobile(BuildContext context) =>
+      MediaQuery.of(context).size.width < 768;
 
+  static bool isTablet(BuildContext context) =>
+      MediaQuery.of(context).size.width < 1200 &&
+      MediaQuery.of(context).size.width >= 768;
+
+ static  bool isDesktop(BuildContext context) =>
+      MediaQuery.of(context).size.width >= 1200;
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth < 768) {
+        
+        print(constraints.maxWidth);
+        if (isMobile(context)) {
           return Container(
             // height: size.height,
             width: size.width,
@@ -30,7 +40,7 @@ class HelperClass extends StatelessWidget {
                 vertical: size.height * 0.05, horizontal: 18),
             child: mobile,
           );
-        } else if (constraints.maxWidth < 1200) {
+        } else if (isTablet(context)) {
           return Container(
             // height: size.height,
             width: size.width,

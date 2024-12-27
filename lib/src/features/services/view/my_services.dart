@@ -17,7 +17,7 @@ class MyServices extends GetView<ServiceViewController> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return HelperClass(
+    return ResponsibeLayout(
       mobile: Column(
         // mainAxisSize: MainAxisSize.min,
         children: [

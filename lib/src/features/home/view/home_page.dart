@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return HelperClass(
+    return ResponsibeLayout(
       mobile: Column(
         children: [
           const ProfileAnimation(
