@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     final PageStorageBucket bucket = PageStorageBucket();
     return GetMaterialApp(
       initialBinding: MainDashboardBinding(),
-      title: 'My Portfolio',
+      title: 'Flutter Dev Portfolio',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,

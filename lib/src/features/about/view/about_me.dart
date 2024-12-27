@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_website/src/core/app_constant/app_string.dart';
 import 'package:portfolio_website/src/globals/app_assets.dart';
 import 'package:portfolio_website/src/globals/app_colors.dart';
 import 'package:portfolio_website/src/globals/app_text_styles.dart';

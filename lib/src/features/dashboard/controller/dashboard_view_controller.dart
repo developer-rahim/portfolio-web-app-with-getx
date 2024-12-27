@@ -23,8 +23,8 @@ class MianDashboardViewController extends GetxController {
   // RxInt currentIndex = 0.obs;
 
   final menuItems = <String>[
-    'Home',
     'About',
+    'Skills',
     'Services',
     'Portfolio',
     'Contact',

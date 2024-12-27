@@ -71,6 +71,7 @@ class HomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Expanded(child: _HomePersonalInfo()),
+          SizedBox(width: 30),
           ProfileAnimation(),
         ],
       ),
