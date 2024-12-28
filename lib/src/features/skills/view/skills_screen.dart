@@ -6,7 +6,9 @@ import 'package:portfolio_website/src/globals/app_colors.dart';
 import 'package:portfolio_website/src/globals/app_text_styles.dart';
 import 'package:portfolio_website/src/globals/constants.dart';
 import 'package:portfolio_website/src/utils/helper_class.dart';
-part '../widget/about_me_content.dart';
+part '../widget/skills_content.dart';
+part '../widget/skill_content_item.dart';
+part '../widget/skill_content_header.dart';
 
 class SkillsScreen extends StatelessWidget {
   const SkillsScreen({super.key});
@@ -17,23 +19,21 @@ class SkillsScreen extends StatelessWidget {
     return ResponsibeLayout(
       mobile: const Column(
         children: [
-        
+          _SkillContentHeader(),
           SizedBox(height: 35),
           _SkillsContent(),
-         
         ],
       ),
       tablet: const Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          
           SizedBox(width: 25),
           //  Constants.sizedBox(width: 25.0),
           Expanded(flex: 2, child: _SkillsContent())
         ],
       ),
-      desktop: Expanded(child: _SkillsContent()),
+      desktop: const _SkillsContent(),
       paddingWidth: size.width * 0.1,
       bgColor: AppColors.bgColor2,
     );

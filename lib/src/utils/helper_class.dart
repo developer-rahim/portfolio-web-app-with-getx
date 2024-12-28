@@ -14,21 +14,20 @@ class ResponsibeLayout extends StatelessWidget {
     required this.paddingWidth,
     required this.bgColor,
   });
- static bool isMobile(BuildContext context) =>
+  static bool isMobile(BuildContext context) =>
       MediaQuery.of(context).size.width < 768;
 
   static bool isTablet(BuildContext context) =>
       MediaQuery.of(context).size.width < 1200 &&
       MediaQuery.of(context).size.width >= 768;
 
- static  bool isDesktop(BuildContext context) =>
+  static bool isDesktop(BuildContext context) =>
       MediaQuery.of(context).size.width >= 1200;
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return LayoutBuilder(
       builder: (context, constraints) {
-        
         print(constraints.maxWidth);
         if (isMobile(context)) {
           return Container(
@@ -37,7 +36,9 @@ class ResponsibeLayout extends StatelessWidget {
             alignment: Alignment.center,
             color: bgColor,
             padding: EdgeInsets.symmetric(
-                vertical: size.height * 0.05, horizontal: 18),
+              vertical: size.height * 0.05,
+              horizontal: 18,
+            ),
             child: mobile,
           );
         } else if (isTablet(context)) {
@@ -48,7 +49,7 @@ class ResponsibeLayout extends StatelessWidget {
             color: bgColor,
             padding: EdgeInsets.symmetric(
               vertical: size.height * 0.1,
-              horizontal: paddingWidth,
+              horizontal: 18,
             ),
             child: tablet,
           );

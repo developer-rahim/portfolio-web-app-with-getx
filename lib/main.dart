@@ -15,27 +15,27 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    final PageStorageBucket bucket = PageStorageBucket(); final double height = MediaQuery.of(context).size.height;
+    final PageStorageBucket bucket = PageStorageBucket();
+    final double height = MediaQuery.of(context).size.height;
     final double weight = MediaQuery.of(context).size.width;
     return ScreenUtilInit(
-      useInheritedMediaQuery: true,
-      designSize: Size(weight, height),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (context,_) {
-        return GetMaterialApp(
-          initialBinding: MainDashboardBinding(),
-          title: 'Flutter Dev Portfolio',
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          home: PageStorage(
-            bucket: bucket,
-            child: const MainDashBoard(),
-          ),
-        );
-      }
-    );
+        useInheritedMediaQuery: true,
+        designSize: Size(weight, height),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (context, _) {
+          return GetMaterialApp(
+            initialBinding: MainDashboardBinding(),
+            title: 'Flutter Dev Portfolio',
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
+            home: PageStorage(
+              bucket: bucket,
+              child: const MainDashBoard(),
+            ),
+          );
+        });
   }
 }
