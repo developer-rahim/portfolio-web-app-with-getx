@@ -10,104 +10,104 @@ class _SkillsContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       // mainAxisSize: MainAxisSize.min,
       children: [
-       
-        const _SkillsContentCard(
+        _SkillContentHeader(),
+        const _SkillsContentItem(
           title: AppString.frameworkAndProgramming,
           subtitle: AppString.flutterFramework,
           description: AppString.flutterFrameworkDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.dartProgramming,
           description: AppString.dartProgrammingdescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           title: AppString.stateManagement,
           subtitle: AppString.provider,
           description: AppString.providerDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.riverpod,
           description: AppString.riverpodDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.getX,
           description: AppString.getxDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           title: AppString.backendAndAPIIntegration,
           subtitle: AppString.restfulApis,
           description: AppString.restfulApisDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.firebse,
           description: AppString.firebseDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           title: AppString.localDatabase,
           subtitle: AppString.hive,
           description: AppString.hiveDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.sqfLite,
           description: AppString.sqfLiteDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.sharePrefarence,
           description: AppString.sharePrefarenceDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.getStorage,
           description: AppString.getStorageDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           title: AppString.performanceOptimization,
           subtitle: AppString.devTools,
           description: AppString.devToolsDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.performance,
           description: AppString.performanceDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           title: AppString.devOpsAndDeployment,
           subtitle: AppString.appStorePlayStore,
           description: AppString.appStorePlayStoreDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.cICDPipelines,
           description: AppString.cICDPipelinesDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           title: AppString.toolsAndVersionControl,
           subtitle: AppString.iDETools,
           description: AppString.iDEToolsDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.versionControl,
           description: AppString.versionControlDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.packageManagement,
           description: AppString.packageManagementDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           title: AppString.otherRelevantSkills,
           subtitle: AppString.pushNotifications,
           description: AppString.pushNotificationsDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.offline,
           description: AppString.offlineDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.chatGptIntregrate,
           description: AppString.chatGptIntregrateDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.paymentgateway,
           description: AppString.paymentgatewayDescription,
         ),
-        const _SkillsContentCard(
+        const _SkillsContentItem(
           subtitle: AppString.plateformSpecificApp,
           description: AppString.plateformSpecificAppDescription,
         ),

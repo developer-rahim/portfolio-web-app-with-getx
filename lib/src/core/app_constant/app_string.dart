@@ -93,10 +93,10 @@ From prototyping to deployment, I’m dedicated to crafting applications that no
       "Implemented Bakash, Sslcommerz, Apple Pay, Surjo pay payment gateway .";
   static const String offline = "Offline service  :  ";
   static const String offlineDescription =
-      "Make whole app offile. Data automatically syncs when the internet is available .";
+      "Make whole app offile. Data automatically syncs when the internet is available.";
   static const String chatGptIntregrate = "Chat GPT Intregrate  :  ";
   static const String chatGptIntregrateDescription =
-      "Integrate chat GPT for chatbot and make it offline mode with hive storage .";
+      "Integrate chat GPT for chatbot and make it offline mode with hive storage.";
 static const String plateformSpecificApp = "Platform Specific App  :  ";
 static const String plateformSpecificAppDescription = "Developed platform specific app for Android, iOS, MacOS and Web App. ";
 }

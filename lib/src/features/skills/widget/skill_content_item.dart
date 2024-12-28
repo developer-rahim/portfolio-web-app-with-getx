@@ -1,7 +1,7 @@
 
 part of '../view/skills_screen.dart';
-class _SkillsContentCard extends StatelessWidget {
-  const _SkillsContentCard({
+class _SkillsContentItem extends StatelessWidget {
+  const _SkillsContentItem({
     this.title,
     required this.description,
     required this.subtitle,
@@ -29,7 +29,7 @@ class _SkillsContentCard extends StatelessWidget {
               text: TextSpan(
                 text: subtitle,
                 style: AppTextStyles.headerTextStyle(
-                  color: AppColors.lightBlue,
+                  color: AppColors.themeColor,
                   fontSize: 20.sp,
                 ),
                 children: [

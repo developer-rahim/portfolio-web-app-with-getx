@@ -17,22 +17,8 @@ class SkillsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return ResponsibeLayout(
-      mobile: const Column(
-        children: [
-          _SkillContentHeader(),
-          SizedBox(height: 35),
-          _SkillsContent(),
-        ],
-      ),
-      tablet: const Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(width: 25),
-          //  Constants.sizedBox(width: 25.0),
-          Expanded(flex: 2, child: _SkillsContent())
-        ],
-      ),
+      mobile: const _SkillsContent(),
+      tablet: const _SkillsContent(),
       desktop: const _SkillsContent(),
       paddingWidth: size.width * 0.1,
       bgColor: AppColors.bgColor2,
