@@ -16,7 +16,8 @@ class _ServiceAnimationContainer extends GetView<ServiceViewController> {
   final double? hoverWidth;
   @override
   Widget build(BuildContext context) {
-    return Obx(() => AnimatedContainer(
+    return Obx(() {
+      return AnimatedContainer(
           duration: const Duration(milliseconds: 300),
           width: hover.value ? hoverWidth : width,
           height: hover.value ? 390 : 380,
@@ -65,6 +66,7 @@ class _ServiceAnimationContainer extends GetView<ServiceViewController> {
                   buttonName: 'Read More', onTap: () {})
             ],
           ),
-        ));
+        );
+    });
   }
 }

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 // import 'package:portfolio_website/firebase_options.dart';
-import 'package:portfolio_website/src/core/main_dashboard_binding.dart';
+import 'package:portfolio_website/src/core/binding/main_dashboard_binding.dart';
 import 'package:portfolio_website/src/features/dashboard/view/main_dashboard.dart';
 
 Future<void> main() async {

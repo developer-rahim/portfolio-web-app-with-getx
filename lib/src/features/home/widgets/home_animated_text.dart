@@ -16,14 +16,17 @@ class _HomeAnimatedText extends StatelessWidget {
           AnimatedTextKit(
             animatedTexts: [
               TyperAnimatedText(
-                'Flutter ',
+                'Andriod App Developer',
                 textStyle:
                     AppTextStyles.montserratStyle(color: Colors.lightBlue),
               ),
-              TyperAnimatedText('Freelancer',
+              TyperAnimatedText('IOS App Developer',
                   textStyle:
                       AppTextStyles.montserratStyle(color: Colors.lightBlue)),
-              TyperAnimatedText('YouTuber',
+              TyperAnimatedText('Web App Developer',
+                  textStyle:
+                      AppTextStyles.montserratStyle(color: Colors.lightBlue)),
+              TyperAnimatedText('Flutter Developer',
                   textStyle:
                       AppTextStyles.montserratStyle(color: Colors.lightBlue))
             ],
