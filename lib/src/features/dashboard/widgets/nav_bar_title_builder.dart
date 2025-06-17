@@ -23,7 +23,7 @@ class _NavBarTitleBuilder extends GetView<MianDashboardViewController> {
             itemCount: controller.menuItems.length,
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-            separatorBuilder: (context, child) => Constants.sizedBox(width: 8),
+            separatorBuilder: (context, child) => Constants.sizedBox(width: 8.0),
             itemBuilder: (context, index) {
               return InkWell(
                 onTap: () {

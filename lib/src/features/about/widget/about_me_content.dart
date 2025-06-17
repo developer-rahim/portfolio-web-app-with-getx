@@ -13,11 +13,11 @@ class _AboutMeContent extends StatelessWidget {
           duration: const Duration(milliseconds: 1200),
           child: RichText(
             text: TextSpan(
-              text: 'About ',
+              text: AppString.about,
               style: AppTextStyles.headingStyles(fontSize: 30.0),
               children: [
                 TextSpan(
-                  text: 'Me!',
+                  text: AppString.me,
                   style: AppTextStyles.headingStyles(
                       fontSize: 30, color: AppColors.robinEdgeBlue),
                 )
@@ -29,7 +29,7 @@ class _AboutMeContent extends StatelessWidget {
         FadeInLeft(
           duration: const Duration(milliseconds: 1400),
           child: Text(
-            'Flutter Developer!',
+            AppString.about,
             style: AppTextStyles.montserratStyle(color: Colors.white),
           ),
         ),
@@ -37,13 +37,7 @@ class _AboutMeContent extends StatelessWidget {
         FadeInLeft(
           duration: const Duration(milliseconds: 1600),
           child: Text(
-            'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
-            ' The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,'
-            ' as opposed to using \'Content here, content here\', making it look like readable English.'
-            ' Many desktop publishing packages and web page editors now use Lorem Ipsum as their default'
-            ' model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy.'
-            ' Various versions have evolved over the years, sometimes by accident, sometimes on purpose'
-            ' (injected humour and the like).',
+           AppString.aboutMeDescription,
             style: AppTextStyles.normalStyle(),
           ),
         ),

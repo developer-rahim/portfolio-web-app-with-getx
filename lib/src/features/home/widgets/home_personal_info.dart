@@ -12,15 +12,15 @@ class _HomePersonalInfo extends GetView<HomeViewController> {
         FadeInDown(
           duration: const Duration(milliseconds: 1200),
           child: Text(
-            'Hello, It\'s Me',
-            style: AppTextStyles.montserratStyle(color: Colors.white),
+            AppString.helloItMe,
+            style: AppTextStyles.montserratStyle(color: AppColors.white ),
           ),
         ),
         Constants.sizedBox(height: 15.0),
         FadeInRight(
           duration: const Duration(milliseconds: 1400),
           child: Text(
-            'Abdul Rahim',
+             AppString.abdulRahim,
             style: AppTextStyles.headingStyles(),
           ),
         ),
@@ -30,9 +30,7 @@ class _HomePersonalInfo extends GetView<HomeViewController> {
         FadeInDown(
           duration: const Duration(milliseconds: 1600),
           child: Text(
-            'In publishing and graphic design, Lorem ipsum is a placeholder '
-            'text commonly used to demonstrate the visual form of a document'
-            ' or a typeface without relying on meaningful content.',
+           AppString.homeShortDescription,
             style: AppTextStyles.normalStyle(),
           ),
         ),

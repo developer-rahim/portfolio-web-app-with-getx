@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_website/src/core/app_constant/app_string.dart';
 import 'package:portfolio_website/src/globals/app_assets.dart';
 import 'package:portfolio_website/src/globals/app_colors.dart';
 import 'package:portfolio_website/src/globals/app_text_styles.dart';
@@ -14,22 +15,33 @@ class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return HelperClass(
+    return ResponsibeLayout(
       mobile: const Column(
         children: [
+          _AboutProfileSection(
+            radius: 500,
+            height: 200,
+            widgth: 200,
+          ),
+          SizedBox(height: 35),
           _AboutMeContent(),
           // Constants.sizedBox(height: 35.0),
-          SizedBox(height: 35),
-          _AboutProfileSection(),
         ],
       ),
       tablet: const Row(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          _AboutProfileSection(),
+          Expanded(
+            child: _AboutProfileSection(
+              radius: 500,
+              height: 250,
+              widgth: 250,
+            ),
+          ),
           SizedBox(width: 25),
           //  Constants.sizedBox(width: 25.0),
-          Expanded(child: _AboutMeContent())
+          Expanded(flex: 2, child: _AboutMeContent())
         ],
       ),
       desktop: const Row(

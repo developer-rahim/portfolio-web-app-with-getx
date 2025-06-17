@@ -4,6 +4,7 @@ import 'package:portfolio_website/src/globals/app_colors.dart';
 import 'package:portfolio_website/src/globals/app_text_styles.dart';
 import 'package:portfolio_website/src/globals/constants.dart';
 import 'package:portfolio_website/src/features/dashboard/controller/dashboard_view_controller.dart';
+import 'package:portfolio_website/src/utils/helper_class.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 part '../widgets/nav_bar_animation.dart';
 part '../widgets/nav_bar_title_builder.dart';
@@ -33,19 +34,20 @@ class _MainDashBoardState extends State<MainDashBoard> {
       } else {
         debugPrint('No items visible');
       }
-      print(controller.menuIndex.value);
+      //print(controller.menuIndex.value);
     });
   }
 
-  // @override
-  // void dispose() {
-  //   controller.scrollController.dispose();
-  //   super.dispose();
-  // }
+  @override
+  void dispose() {
+    controller.scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    print(MediaQuery.of(context).size.width)
+;    return Scaffold(
       backgroundColor: AppColors.bgColor,
       appBar: AppBar(
         backgroundColor: AppColors.bgColor,
@@ -54,7 +56,7 @@ class _MainDashBoardState extends State<MainDashBoard> {
         elevation: 0,
         title: LayoutBuilder(
           builder: (context, constraints) {
-            if (constraints.maxWidth < 768) {
+            if (ResponsibeLayout. isMobile(context)) {
               return const _NavBarTitlePopupMenu();
             } else {
               return const _NavBarTitleBuilder();

@@ -17,7 +17,7 @@ class MyPortfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    return HelperClass(
+    return ResponsibeLayout(
       mobile: const Column(
         mainAxisSize: MainAxisSize.min,
         children: [

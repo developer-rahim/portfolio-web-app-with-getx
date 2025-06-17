@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyles {
-  static TextStyle headerTextStyle({Color color = Colors.white}) {
+  static TextStyle headerTextStyle({
+    Color color = Colors.white,
+    double? fontSize,
+  }) {
     return GoogleFonts.signikaNegative(
-      fontSize: 18,
+      fontSize: fontSize ?? 18.sp,
       fontWeight: FontWeight.w600,
       color: color,
     );
@@ -35,11 +39,11 @@ class AppTextStyles {
 
   static TextStyle normalStyle({
     Color color = Colors.white,
-    double fontSize = 16,
+    double ?fontSize ,
   }) {
     return TextStyle(
       fontWeight: FontWeight.w500,
-      fontSize: fontSize,
+      fontSize: fontSize??16.sp,
       color: color,
       letterSpacing: 1.7,
       height: 1.5,
